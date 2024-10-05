@@ -1,0 +1,13 @@
+﻿function [poly] = lag_poly(x,y)
+n=length(x);
+syms t
+poly=0;
+for i=1:n
+    L=1;
+    for j=1:n
+        if(i~=j)
+            L=L*(t-x(j))/(x(i)-x(j));
+end end 
+    poly=poly+L*y(i);
+end 
+poly=simplify(poly); t = x(1):0.001:max(x); z = eval(poly); plot(x,y,'*k',t,z,'k') legend('Data Points','Lagrange Polynomial') end 

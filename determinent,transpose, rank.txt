@@ -1,0 +1,6 @@
+﻿#input of a matrix
+A=[4 6 9;3 0 9;5 3 15]; 
+
+det(A) 
+transpose(A) 
+rank(A) 

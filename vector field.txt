@@ -1,0 +1,11 @@
+﻿x=linspace(-2,2,5);      # -2,2 her are based on the intervals of x,y,z
+y=linspace(-2,2,5);
+z=linspace(-2,2,5);
+[x,y,z]=meshgrid(x,y,z);
+f1=x;        #f1 ,f2, f3 are taken from the I ,j ,k terms respectively
+f2=y.^2;
+f3=z.^2+1;
+quiver3(x,y,z,f1,f2,f3)
+xlabel('x')
+ylabel('y')
+zlabel('z')
